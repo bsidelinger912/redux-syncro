@@ -1,5 +1,6 @@
 import connector, { InjectedProps } from "src/connector/connector";
-import { ConnectorState } from "src/redux/reducer";
+import { AppState } from "../redux/store";
+
 
 interface OwnProps {
 
@@ -11,8 +12,10 @@ interface StateProps {
 
 export type Props = InjectedProps & StateProps & OwnProps;
 
-function getState(_: ConnectorState) {
-  return {};
+function getState(state: AppState) {
+  return {
+    foo: state.demoState.foo,
+  };
 }
 
 export default (Component: React.ComponentClass<Props>): React.ComponentClass<OwnProps> =>

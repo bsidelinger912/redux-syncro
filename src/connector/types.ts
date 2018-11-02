@@ -56,6 +56,7 @@ export interface Dependency<Args, Resp extends {}> {
   currentState: DependencyVariant<Resp>;
   dependencyKey: string;
   dependencyRef: DependencyRef<Args, Resp>;
+  isDependency: boolean;
   options: DependencyOptions<Args>
 }
 
@@ -91,9 +92,10 @@ export interface ApiActionWithPropName extends ApiAction<any, any> {
 
 // TODO: look closer at this
 export interface PropsFromGetState {
-  [key: string]: DependencyVariant<any> | Array<DependencyVariant<any>> | DependencyWithPropReference[]
-  | Dependency<any, any> | Array<Dependency<any, any>> | string | number | boolean | ReducerState;
-  apiState: ReducerState;
+  // [key: string]: DependencyVariant<any> | Array<DependencyVariant<any>> | DependencyWithPropReference[]
+  // | Dependency<any, any> | Array<Dependency<any, any>> | string | number | boolean | ReducerState;
+  [key: string]: any;
+  connectorState: ReducerState;
   apiDeps: DependencyWithPropReference[];
 }
 

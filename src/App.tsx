@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 
 import './App.css';
 
-import store from "./demo/store";
+import store from "./demo/redux/store";
 
 import logo from './logo.svg';
 
