@@ -5,11 +5,9 @@ import { Provider } from 'react-redux';
 
 import './App.css';
 
-import store from "./demo/redux/store";
+import store from "./redux/store";
 
-import logo from './logo.svg';
-
-import List from './demo/List/List';
+import List from './List/List';
 
 class App extends React.Component {
   public render() {
@@ -17,7 +15,6 @@ class App extends React.Component {
       <Provider store={store}>
         <div className="App">
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">React Redux Connector</h1>
           </header>
           <div>
